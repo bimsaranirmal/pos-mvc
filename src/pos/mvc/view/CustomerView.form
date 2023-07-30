@@ -48,7 +48,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="headerPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="159" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="150" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -59,12 +59,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="formPanel" alignment="1" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="294" max="-2" attributes="0"/>
                       <Component id="headerlabel" min="-2" pref="191" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Component id="formPanel" alignment="1" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -82,6 +82,9 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="headerlabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Manage Customer"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -110,15 +113,10 @@
                                               <Component id="custTitleLabel" pref="100" max="32767" attributes="0"/>
                                               <Component id="custIdLabel" max="32767" attributes="0"/>
                                           </Group>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                                  <Component id="custTitleText" min="-2" pref="89" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="custIdText" max="32767" attributes="0"/>
-                                              </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="custIdText" min="-2" pref="91" max="-2" attributes="0"/>
+                                              <Component id="custTitleText" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -164,9 +162,9 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="287" max="-2" attributes="0"/>
-                                  <Component id="custDellButton" min="-2" pref="165" max="-2" attributes="0"/>
+                                  <Component id="deleteButton" min="-2" pref="165" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="custUpdateButton" min="-2" pref="157" max="-2" attributes="0"/>
+                                  <Component id="updateButton" min="-2" pref="157" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="addButton" min="-2" pref="156" max="-2" attributes="0"/>
                               </Group>
@@ -215,8 +213,8 @@
                           </Group>
                           <EmptySpace pref="30" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="custDellButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="custUpdateButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="deleteButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="updateButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="addButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -279,12 +277,12 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="custZipText">
                 </Component>
-                <Component class="javax.swing.JButton" name="custDellButton">
+                <Component class="javax.swing.JButton" name="deleteButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Delete Customer"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="custUpdateButton">
+                <Component class="javax.swing.JButton" name="updateButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Update Customer"/>
                   </Properties>
