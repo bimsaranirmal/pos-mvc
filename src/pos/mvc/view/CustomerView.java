@@ -105,6 +105,11 @@ public class CustomerView extends javax.swing.JFrame {
         custZipLabel.setText("Postal Code");
 
         deleteButton.setText("Delete Customer");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
 
         updateButton.setText("Update Customer");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
@@ -319,6 +324,10 @@ public class CustomerView extends javax.swing.JFrame {
         updateCustomer();
     }//GEN-LAST:event_updateButtonActionPerformed
 
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        deleteCustomer();
+    }//GEN-LAST:event_deleteButtonActionPerformed
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -455,6 +464,20 @@ public class CustomerView extends javax.swing.JFrame {
             loadAllCustomers();        
         } catch (SQLException ex) {
             Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+   }
+   
+   private void deleteCustomer(){
+        try {
+            String custId = custIdText.getText();
+            String resp = customerController.deleteCustomer(custId);
+            JOptionPane.showMessageDialog(this, resp);
+            clear();
+            loadAllCustomers(); 
+        } catch (SQLException ex) {
+            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
         }
    }
 }
