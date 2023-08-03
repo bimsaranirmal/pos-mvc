@@ -7,6 +7,7 @@ package pos.mvc;
 import pos.mvc.view.CustomerView;
 import pos.mvc.view.ItemView;
 import pos.mvc.view.OrderView;
+import pos.mvc.view.ShopView;
 
 /**
  *
@@ -19,7 +20,8 @@ public class POSMVC {
      */
     public static void main(String[] args) {
         //new CustomerView().setVisible(true);
-        new OrderView().setVisible(true);
+       // new OrderView().setVisible(true);
+        new ShopView().setVisible(true);
     }
     
 }
